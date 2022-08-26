@@ -1,0 +1,23 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+
+// подключения компонентов страницы
+@import "./components/swiper-bundle.min";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home";
+@import "./components/services";
+@import "./components/form";
+@import "./components/benefits";
+@import "./components/slider";
+@import "./components/partners";
+@import "./components/about-main";
+@import "./components/about";
+@import "./components/vacancy";
+@import "./components/contacts";
+@import "./components/services-benefits";
+

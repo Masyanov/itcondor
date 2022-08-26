@@ -1,0 +1,260 @@
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family, sans-serif);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p, .list-reset, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1140px;
+  @include middle-desktop {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+.section__title {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 50px 0;
+  @include small-tablet {
+    font-size: 30px;
+  }
+  @include mobile {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+}
+
+.breadcrumb {
+  padding: 0;
+  padding: 30px 0;
+  margin: 0;
+
+  max-width: var(--container-width);
+
+  span {
+    color: #777;
+    a {
+      color: #777;
+      text-decoration-line: underline;
+    }
+    .breadcrumb_last {
+      color: #000000;
+    }
+  }
+}
+.fancybox__content {
+  background: #F2F2F2;
+  .wpcf7 {
+    padding-top: 0;
+  }
+}
+.burger {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.wpcf7 {
+  input {
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    height: 48px;
+    width: 100%;
+    margin: 4px 0 16px 0;
+  }
+  .wpcf7-submit {
+    position: relative !important;
+    font-size: 15px;
+    background: white;
+    border: 3px solid #FECB2F;
+    border-radius: 0;
+    cursor: pointer;
+    width: 245px;
+    padding: 15px 24px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+}
+.section__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  span {
+    width: 90px;
+    height: 1px;
+    background: #FECB2F;
+    margin: 20px;
+  }
+  .section__title {
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #2D446C;
+
+    @include mobile {
+      width: 100%;
+      font-size: 28px;
+    }
+  }
+  .white {
+     background: #FFFFFF;
+   }
+  .black {
+    color: #000;
+  }
+}
+
+//error 404
+
+.error-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+
+  h1 {
+    font-size: 40px;
+    color: #2D446C;
+  }
+  h2 {
+    font-size: 120px;
+    color: #FECB2F;
+    margin: 30px 0;
+  }
+  span {
+    color: #2D446C;
+  }
+  p {
+    text-align: center;
+  }
+  .link-404 {
+    display: flex;
+    margin: 20px 0;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    a {
+      margin-right: 10px;
+      color: #2D446C;
+      text-decoration: underline;
+    }
+    input {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+      color: #2D446C;
+      text-decoration: underline;
+    }
+  }
+}
+
+
